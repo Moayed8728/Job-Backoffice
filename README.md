@@ -2,7 +2,7 @@
 
 1. Introduction
 
-Job Backoffice is the administrative panel for the TalentConnect ecosystem. It allows administrators to manage job listings, users, and application data.
+    Job Backoffice is the administrative panel for the TalentConnect ecosystem. It allows administrators to manage job listings, users, and application data.
 
 2. Tech Stack
 
@@ -36,9 +36,9 @@ Job Backoffice is the administrative panel for the TalentConnect ecosystem. It a
 6. Development Notes
 
     1. Ensure bootstrap/cache exists and is writable.
-2. Ensure storage directories are writable.
-3. Ensure database container is running.
+    2. Ensure storage directories are writable.
+    3. Ensure database container is running.
 
 7. License
 
-Internal project for TalentConnect ecosystem.
+    Internal project for TalentConnect ecosystem.
