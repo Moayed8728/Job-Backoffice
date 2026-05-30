@@ -1,4 +1,10 @@
 <x-guest-layout>
+    <div class="mb-7">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-emerald-600">Secure login</p>
+        <h2 class="mt-2 text-3xl font-extrabold tracking-normal text-slate-950">Access your dashboard</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-500">Use your administrator or company-owner account to continue.</p>
+    </div>
+
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -22,7 +28,7 @@
                     name="password" required autocomplete="current-password" />
 
                 <!-- Eye Icon for Show/Hide Password -->
-                <button type="button" class="absolute inset-y-0 right-2 flex items-center text-gray-500"
+                <button type="button" class="absolute inset-y-0 right-2 flex items-center text-slate-500"
                     @click="show = !show">
                     <svg x-show="!show" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor">
@@ -49,14 +55,14 @@
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox"
-                    class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    class="rounded border-slate-300 text-emerald-600 shadow-sm focus:ring-emerald-500" name="remember">
+                <span class="ms-2 text-sm text-slate-600">{{ __('Remember me') }}</span>
             </label>
         </div>
 
         <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                <a class="text-sm font-semibold text-slate-500 hover:text-emerald-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
                     href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </a>
