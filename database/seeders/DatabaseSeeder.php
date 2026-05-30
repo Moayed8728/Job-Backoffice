@@ -122,7 +122,7 @@ class DatabaseSeeder extends Seeder
                     'jobVacancyId'=> $jobVacancy->id,
                     'userId' => $applicant->id,
                     'resumeId' => $resume->id,
-                    'status' => $application['status'],
+                    'status' => ucfirst($application['status']),
                     'aiGeneratedScore' => $application['aiGeneratedScore'],
                     'aiGeneratedFeedback' => $application['aiGeneratedFeedback'],
                     
