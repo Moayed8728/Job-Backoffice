@@ -10,11 +10,10 @@ use App\Http\Controllers\JobCategoryController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::view('/', 'welcome')->middleware('guest')->name('welcome');
 
 Route::middleware(['auth','role:admin,company-owner'])->group(function () {
     
-    Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
+    Route::get('/',[DashboardController::class,'index'])->name('dashboard');
     
     Route::resource('job-applications', JobApplicationController::class);
     Route::put('job-applications/{id}/restore',[JobApplicationController::class,'restore'])->name('job-applications.restore');
